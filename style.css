@@ -1,0 +1,164 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+:root{
+    --body-bgcolor: #333;
+    --timer-bgcolor: #111;
+    --number-color: #7fe5f9;
+    --twentyfive-color: #9856F5;
+    --ten-color: #56F57C;
+    --five-color: #F5EA78;
+    --control-color: #ffb672;
+    --zero-color: #F50973;
+}
+
+body{
+    font-size: 16px;
+    font-family: 'Courier New', Courier, monospace;
+    background-color: var(--body-bgcolor);
+    height: 100dvh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.timer-block{
+    background-color: var(--timer-bgcolor);
+    width: 60rem;
+    height: 40rem;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    gap: 3.2rem;
+    border: .4rem solid var(--number-color);
+    border-radius: 4rem;
+    color: var(--number-color);
+    animation: borderColor 2s infinite linear;
+}
+
+.output-time{
+    font-size: 3.2rem;
+    font-weight: 900;
+    text-shadow: 0 0 3rem var(--number-color);
+}
+
+.insert-time-buttons{
+    width: 24rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.insert-time{
+    width: 10rem;
+    height: 3rem;
+    background-color: var(--body-bgcolor);
+    border-radius: 1.2rem .6rem;
+    transition: .2s;
+    cursor: pointer;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+#insertTwoFive{
+    color: var(--twentyfive-color);
+    border: .2rem solid var(--twentyfive-color);
+}
+#insertTwoFive:hover{
+    box-shadow: 0 0 1.2rem var(--twentyfive-color);
+    background-color: var(--twentyfive-color);
+    color: var(--timer-bgcolor);
+}
+
+#insertTen{
+    color: var(--ten-color);
+    border: .2rem solid var(--ten-color);
+}
+#insertTen:hover{
+    box-shadow: 0 0 1.2rem var(--ten-color);
+    background-color: var(--ten-color);
+    color: var(--timer-bgcolor);
+}
+
+#insertFive{
+    color: var(--five-color);
+    border: .2rem solid var(--five-color);
+}
+#insertFive:hover{
+    box-shadow: 0 0 1.2rem var(--five-color);
+    background-color: var(--five-color);
+    color: var(--timer-bgcolor);
+}
+
+#insertSeconds{
+    color: var(--number-color);
+    border: .2rem solid var(--number-color);
+}
+#insertSeconds:hover{
+    box-shadow: 0 0 1.2rem var(--number-color);
+    background-color: var(--number-color);
+    color: var(--timer-bgcolor);
+}
+
+#zeroTime{
+    color: var(--zero-color);
+    border: .2rem solid var(--zero-color);
+}
+#zeroTime:hover{
+    box-shadow: 0 0 1.2rem var(--zero-color);
+    background-color: var(--zero-color);
+    color: var(--timer-bgcolor);
+}
+
+.control-button{
+    width: 10rem;
+    height: 3rem;
+    background-color: var(--body-bgcolor);
+    border-radius: 1.2rem .6rem;
+    transition: .2s;
+    cursor: pointer;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: var(--control-color);
+    border: .2rem solid var(--control-color);
+}
+.control-button:hover{
+    box-shadow: 0 0 1.2rem var(--control-color);
+    background-color: var(--control-color);
+    color: var(--timer-bgcolor);
+}
+
+@keyframes borderColor {
+    0%{
+        border-color: var(--twentyfive-color);
+        box-shadow: inset 0 0 1.2rem var(--twentyfive-color), 0 0 1.2rem var(--twentyfive-color);
+    }
+    20%{
+        border-color: var(--ten-color);
+        box-shadow: inset 0 0 1.2rem var(--ten-color), 0 0 1.2rem var(--ten-color);
+    }
+    40%{
+        border-color: var(--five-color);
+        box-shadow: inset 0 0 1.2rem var(--five-color), 0 0 1.2rem var(--five-color);
+    }
+    60%{
+        border-color: var(--number-color);
+        box-shadow: inset 0 0 1.2rem var(--number-color), 0 0 1.2rem var(--number-color);
+    }
+    80%{
+        border-color: var(--zero-color);
+        box-shadow: inset 0 0 1.2rem var(--zero-color), 0 0 1.2rem var(--zero-color);
+    }
+    100%{
+        border-color: var(--twentyfive-color);
+        box-shadow: inset 0 0 1.2rem var(--twentyfive-color), 0 0 1.2rem var(--twentyfive-color);
+    }
+}
