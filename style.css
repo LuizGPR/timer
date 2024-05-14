@@ -1,3 +1,30 @@
+@keyframes borderColor {
+    0%{
+        border-color: var(--twentyfive-color);
+        box-shadow: inset 0 0 1.2rem var(--twentyfive-color), 0 0 1.2rem var(--twentyfive-color);
+    }
+    20%{
+        border-color: var(--ten-color);
+        box-shadow: inset 0 0 1.2rem var(--ten-color), 0 0 1.2rem var(--ten-color);
+    }
+    40%{
+        border-color: var(--five-color);
+        box-shadow: inset 0 0 1.2rem var(--five-color), 0 0 1.2rem var(--five-color);
+    }
+    60%{
+        border-color: var(--number-color);
+        box-shadow: inset 0 0 1.2rem var(--number-color), 0 0 1.2rem var(--number-color);
+    }
+    80%{
+        border-color: var(--zero-color);
+        box-shadow: inset 0 0 1.2rem var(--zero-color), 0 0 1.2rem var(--zero-color);
+    }
+    100%{
+        border-color: var(--twentyfive-color);
+        box-shadow: inset 0 0 1.2rem var(--twentyfive-color), 0 0 1.2rem var(--twentyfive-color);
+    }
+}
+
 *{
     margin: 0;
     padding: 0;
@@ -27,6 +54,7 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
 }
 
 .timer-block{
@@ -41,7 +69,7 @@ body{
     border: .4rem solid var(--number-color);
     border-radius: 4rem;
     color: var(--number-color);
-    animation: borderColor 2s infinite linear;
+    animation: borderColor 60s infinite linear;
 }
 
 .output-time{
@@ -136,29 +164,19 @@ body{
     color: var(--timer-bgcolor);
 }
 
-@keyframes borderColor {
-    0%{
-        border-color: var(--twentyfive-color);
-        box-shadow: inset 0 0 1.2rem var(--twentyfive-color), 0 0 1.2rem var(--twentyfive-color);
-    }
-    20%{
-        border-color: var(--ten-color);
-        box-shadow: inset 0 0 1.2rem var(--ten-color), 0 0 1.2rem var(--ten-color);
-    }
-    40%{
-        border-color: var(--five-color);
-        box-shadow: inset 0 0 1.2rem var(--five-color), 0 0 1.2rem var(--five-color);
-    }
-    60%{
-        border-color: var(--number-color);
-        box-shadow: inset 0 0 1.2rem var(--number-color), 0 0 1.2rem var(--number-color);
-    }
-    80%{
-        border-color: var(--zero-color);
-        box-shadow: inset 0 0 1.2rem var(--zero-color), 0 0 1.2rem var(--zero-color);
-    }
-    100%{
-        border-color: var(--twentyfive-color);
-        box-shadow: inset 0 0 1.2rem var(--twentyfive-color), 0 0 1.2rem var(--twentyfive-color);
-    }
+.main-footer{
+    width: 100dvw;
+    height: 4rem;
+    color: #ddd;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    bottom: 4.2rem;
+    background-color: #111;
+    border-width: .1rem 0;
+    border-color: #fff;
+    border-style: solid;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
+
